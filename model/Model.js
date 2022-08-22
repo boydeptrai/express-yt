@@ -3,9 +3,11 @@ const mongoose = require("mongoose");
 const authorSchema = new mongoose.Schema({
     name: {
         type: String,
+        require: true
     },
     year: {
         type: Number,
+        require: true
     },
     books: [
         {
