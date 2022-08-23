@@ -8,4 +8,7 @@ router.post("/",authorController.addAuthor);
 //GET ALL AUTHORS
 router.get("/",authorController.getAllAuthors);
 
+// GET AN AUTHOR
+router.get("/:id",authorController.getAnAuthor);
+
 module.exports = router;

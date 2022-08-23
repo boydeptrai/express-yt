@@ -7,6 +7,7 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 
 const authorRoute = require("./routes/Author");
+const bookRoute = require("./routes/Book");
 
 app.use(bodyParser.json({limit:"50mb"}));
 app.use(cors());
@@ -21,6 +22,8 @@ mongoose.connect((process.env.MONGODB_URL), () =>{
 
 // ROUTES
 app.use("/v1/Author", authorRoute);
+app.use("/v1/Book", bookRoute);
+
 app.listen(8000,() => {
     console.log("Server is running...")
 });

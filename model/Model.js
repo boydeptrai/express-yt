@@ -24,7 +24,7 @@ const bookSchema = new mongoose.Schema({
     publishedDate: {
         type: String,
     },
-    genres: {
+    generes: {
         type: [String]
     },
     author: {
